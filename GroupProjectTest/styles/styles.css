@@ -1,0 +1,147 @@
+/*General*/
+body {
+    font-family: SansSerif;
+    width: 100%;
+}
+
+div {
+    display: block;
+}
+
+.mainContainer {
+    padding: 0 10px;
+    clear: both;
+    margin: 0 auto;
+    background: #242424 no-repeat 0 0;
+    font-size: 20px;
+}
+
+.mainContainer ul{
+    padding-left: 10%;
+}
+
+.mainContainer a {
+    text-decoration: none;
+    color: white;
+}
+
+.col-md-6, .col-md-2, .col-md-4 {
+    width: 33%;
+    float: left;
+    padding: 0%;
+    padding-bottom: 0%;
+    display: block;
+    align-content: center;
+    border-color: black;
+}
+
+/*Header*/
+.jumbotron {
+    text-align: center;
+}
+
+/*Footer*/
+.conyFooter {
+    background: #242424 no-repeat 0 0;
+    color: #818181;
+    clear: both;
+    padding: 53px 0 44px 0;
+    margin: auto;
+    overflow: auto;
+}
+
+.footerSubMenu-1, .footerSubMenu-2, .footerSubMenu-3, .footerSubMenu-4 {
+    display: block;
+    float: left;
+    width: 20%;
+    min-width: 250px;
+    padding: 2%;
+}
+
+.footerBottom {
+    background-color: #141414;
+    color: #656565;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/*Index*/
+#categoryList li {
+    list-style-type: none;
+    clear: left;
+
+}
+
+#categoryList li img, #categoryList li h2 {
+    float: left;
+    font-size: 20px;
+}
+
+/*Form*/
+#aboutText {
+    text-align: center;
+    font-size: 16px;
+}
+
+.err {
+    color:darkred;
+    display:none;
+}
+
+.wpcf7-form-control-wrap {
+    width: 100%;
+}
+
+fieldset:last-of-type .col, fieldset:first-of-type .col {
+    min-width: 240px;
+}
+
+.form-check {
+    float: left;
+}
+
+form#orgForm {
+    text-shadow: 1px 1px #303030;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #050505;
+    /*
+    padding: 5px;
+    */
+    color: black;
+    overflow: auto;
+
+}
+
+form#orgForm .row {
+    background-color: rgba(156, 252, 252, 0.3);
+    padding-bottom: 10px;
+}
+
+fieldset {
+    background-color: rgba(156, 252, 0, 0.5);
+    border-style: solid;
+    border-color: #141414;
+}
+
+.btn-primary {
+    margin: auto;
+}
+
+#phone {
+    border-radius: 5px;
+    padding-bottom: inherit;
+}
+
+label {
+    font-size: 20px;
+}
+
+fieldset, fieldset.div {
+
+}
+
+legend {
+    text-transform: uppercase;
+    text-align: center;
+}
