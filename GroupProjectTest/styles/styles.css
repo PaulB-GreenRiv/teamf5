@@ -66,10 +66,14 @@ div {
 }
 
 /*Index*/
+#whatIs p {
+    font-size: 24px;
+    text-align: center;
+}
+
 #categoryList li {
     list-style-type: none;
     clear: left;
-
 }
 
 #categoryList li img, #categoryList li h2 {
@@ -77,10 +81,65 @@ div {
     font-size: 20px;
 }
 
+#categoryList a:link, #categoryList a:visited {
+    text-decoration: none;
+    color: forestgreen;
+}
+
+#categoryList a:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+#categoryList p {
+    font-size: 30px;
+}
+
+#categoryList .col {
+    min-width: 240px;
+    color: black;
+}
+
+/*Categories*/
+#catAgriculture h1 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#catAgriculture ul li {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 3px;
+    background-color: white;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(156, 252, 0, 0.5);
+}
+
+#catAgriculture p {
+    font-size: 20px;
+}
+
+#catAgriculture a:link, #catAgriculture a:visited {
+    text-decoration: none;
+    color: mediumblue;
+}
+
+#catAgriculture a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
 /*Form*/
-#aboutText {
+#orgForm {
+    background-color: #cccccf;
+}
+
+#aboutText p {
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .err {
@@ -110,12 +169,15 @@ form#orgForm {
     */
     color: black;
     overflow: auto;
-
 }
 
 form#orgForm .row {
     background-color: rgba(156, 252, 252, 0.3);
     padding-bottom: 10px;
+}
+
+#orgForm .col {
+    min-width: 240px;
 }
 
 fieldset {

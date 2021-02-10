@@ -9,7 +9,7 @@
 <body>
 <!--Include Header.html-->
 <?php
-  include('includes/header.html') ;
+  include('includes/header.html');
 ?>
 
 <br>
@@ -170,6 +170,7 @@
                     <option value="West Virginia">West Virginia</option>
                     <option value="Wisconsin">Wisconsin</option>
                     <option value="Wyoming">Wyoming</option>
+                    <option value="Other">Not from America</option>
                 </select>
                 <span class="err" id="err-state">Please enter a state</span>
             </div>

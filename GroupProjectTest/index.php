@@ -3,7 +3,7 @@
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 
-    include ('includes/head.html');
+    include('includes/head.html');
 ?>
 
 <body>
@@ -40,62 +40,102 @@
 <div class="container" id="categoryList">
     <h1>Categories</h1>
     <ul>
-        <li>
-            <img src="images/imgAgri.png" height="20" alt="Agriculture Image" id="AgriImg">
-            <p>Agriculture</p>
-        </li>
-        <li>
-            <img src="images/imgCirc.png" height="20" alt="Circular Economy Image" id="CircImg">
-            <p>Circular Economy</p>
-        </li>
-        <li>
-            <img src="images/imgCloth.png" height="20" alt="Clothing Image" id="ClothImg">
-            <p>Clothing</p>
-        </li>
-        <li>
-            <img src="images/imgCons.png" height="20" alt="Consumer Goods Image" id="ConsImg">
-            <p>Consumer Goods</p>
-        </li>
-        <li>
-            <img src="images/imgEco.png" height="20" alt="Ecology Image" id="EcoImg">
-            <p>Ecology</p>
-        </li>
-        <li>
-            <img src="images/imgEduc.png" height="20" alt="Education Image" id="EducImg">
-            <p>Education</p>
-        </li>
-        <li>
-            <img src="images/imgEnrg.png" height="20" alt="Energy Image" id="EnrgImg">
-            <p>Energy</p>
-        </li>
-        <li>
-            <img src="images/imgHeal.png" height="20" alt="Healthcare Image" id="HealImg">
-            <p>Healthcare</p>
-        </li>
-        <li>
-            <img src="images/imgHouse.png" height="20" alt="Housing Image" id="HouseImg">
-            <p>Housing</p>
-        </li>
-        <li>
-            <img src="images/imgLight.png" height="20" alt="Lighting Image" id="LightImg">
-            <p>Lighting</p>
-        </li>
-        <li>
-            <img src="images/imgManuf.png" height="20" alt="Manufacturing Image" id="ManufImg">
-            <p>Manufacturing</p>
-        </li>
-        <li>
-            <img src="images/imgTransp.png" height="20" alt="Transportation Image" id="TranspImg">
-            <p>Transportation</p>
-        </li>
-        <li>
-            <img src="images/imgWast.png" height="20" alt="Wastewater Image" id="WastImg">
-            <p>Wastewater</p>
-        </li>
-        <li>
-            <img src="images/imgWtr.png" height="20" alt="Water Image" id="WtrImg">
-            <p>Water</p>
-        </li>
+        <div class="row">
+            <div class="col">
+                <li>
+                    <img src="images/imgAgri.png" height="20" alt="Agriculture Image" id="AgriImg">
+                    <p><a href="category.php">Agriculture</a></p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgCirc.png" height="20" alt="Circular Economy Image" id="CircImg">
+                    <p>Circular Economy</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgCloth.png" height="20" alt="Clothing Image" id="ClothImg">
+                    <p>Clothing</p>
+                </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <li>
+                    <img src="images/imgCons.png" height="20" alt="Consumer Goods Image" id="ConsImg">
+                    <p>Consumer Goods</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgEco.png" height="20" alt="Ecology Image" id="EcoImg">
+                    <p>Ecology</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgEduc.png" height="20" alt="Education Image" id="EducImg">
+                    <p>Education</p>
+                </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <li>
+                    <img src="images/imgEnrg.png" height="20" alt="Energy Image" id="EnrgImg">
+                    <p>Energy</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgHeal.png" height="20" alt="Healthcare Image" id="HealImg">
+                    <p>Healthcare</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgHouse.png" height="20" alt="Housing Image" id="HouseImg">
+                    <p>Housing</p>
+                </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <li>
+                    <img src="images/imgLight.png" height="20" alt="Lighting Image" id="LightImg">
+                    <p>Lighting</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgManuf.png" height="20" alt="Manufacturing Image" id="ManufImg">
+                    <p>Manufacturing</p>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgTransp.png" height="20" alt="Transportation Image" id="TranspImg">
+                    <p>Transportation</p>
+                </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <li>
+                    <img src="images/imgWast.png" height="20" alt="Wastewater Image" id="WastImg">
+                    <p>Wastewater</p>
+                </li>
+
+            </div>
+            <div class="col">
+                <li>
+                    <img src="images/imgWtr.png" height="20" alt="Water Image" id="WtrImg">
+                    <p>Water</p>
+                </li>
+            </div>
+            <div class="col"><!--This empty column keeps the list evenly spaced--></div>
+        </div>
     </ul>
 </div>
 
