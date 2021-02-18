@@ -143,7 +143,7 @@ div {
 }
 
 .err {
-    color:darkred;
+    color:#ff0000;
     display:none;
 }
 
@@ -160,7 +160,6 @@ fieldset:last-of-type .col, fieldset:first-of-type .col {
 }
 
 form#orgForm {
-    text-shadow: 1px 1px #303030;
     border-radius: 5px;
     border-style: solid;
     border-color: #050505;
@@ -206,4 +205,12 @@ fieldset, fieldset.div {
 legend {
     text-transform: uppercase;
     text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color:white !important;
 }

@@ -7,7 +7,7 @@
 ?>
 
 <body>
-
+    <link href="images/symbol-defs.svg">
 <?php
     include('includes/header.html');
 ?>
@@ -33,7 +33,8 @@
 <div class="container" id="whatIs">
     <h1>What is this site for?</h1>
     <p>
-        This site is your host to find sustainability companies.
+        A searchable database and on-line marketplace for innovative solutions in sustainability;
+        Creating visibility and accelerating speed to market.
     </p>
 </div>
 
@@ -43,7 +44,7 @@
         <div class="row">
             <div class="col">
                 <li>
-                    <img src="images/imgAgri.png" height="20" alt="Agriculture Image" id="AgriImg">
+                    <img src="images/imgAgri.png" height="20" alt="Agriculture Image" id="Agriculture">
                     <p><a href="category.php">Agriculture</a></p>
                 </li>
             </div>

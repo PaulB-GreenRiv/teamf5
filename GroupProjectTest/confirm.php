@@ -94,8 +94,8 @@ include('includes/head.html');
                 echo "<br>";
 
                 //email function, place proper email addresses in fields
-                $emailTo = '#';
-                $emailFrom = '#';
+                $emailTo = 'pbutler10@mail.greenriver.edu';
+                $emailFrom = 'pbutler10@mail.greenriver.edu';
                 $emailBody = "Welcome to Coneybeare $oname!\r\n";
                 $emailBody .= "Their website is: $website and their email address is $cemail.\r\n";
                 $emailBody .= "Their tagline is: $about\r\n";
