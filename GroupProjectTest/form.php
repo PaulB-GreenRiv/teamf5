@@ -37,8 +37,8 @@ include('includes/header.html') ;
                     <!-- Website Name -->
                     <div class="form-group">
                         <label for="website" class="oInfo">Website *</label>
-                        <input type="text" class="form-control" placeholder="website.com" id="website" name="website">
-                        <span class="err" id="err-website">Please enter a website Must Start with an HTTP(S)://
+                        <input type="text" class="form-control" placeholder="http(s)://website.com" id="website" name="website">
+                        <span class="err" id="err-website">Please enter a website Must Start with an 'http(s)://'
                                                         <br> and end with .com, .io, .us, .uk, .org or .gov</span>
                     </div>
                 </div>
@@ -55,7 +55,8 @@ include('includes/header.html') ;
                     <div class="form-group">
                         <label for="imgUpload" class="cInfo">Upload an image of your logo *</label>
                         <input type="file" value="Upload Image" class="form-control" name="imgUpload" id="imgUpload">
-                        <span class="err" id="err-img">Please upload a photo</span>
+                        <span class="err" id="err-img">Please upload a photo
+                                                    <br>Acceptable Formats: .png, .tif, .tiff, .bmp, .jpg, .jpeg</span>
                     </div>
                 </div>
             </div>
@@ -104,8 +105,8 @@ include('includes/header.html') ;
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="about">Enter keywords: <small>(Style: #Keyword)</small></label>
-                        <textarea class="form-control" rows="3" id="keywords" placeholder="#Keyword #Keyword2 #Keyword3" name="keywords"></textarea>
+                        <label for="keywords">Enter keywords: <small>(Style: #Keyword)</small></label>
+                        <textarea class="form-control" rows="3" id="keywords" placeholder="#Keyword #Key word2 #Key word 3" name="keywords"></textarea>
                     </div>
                 </div>
             </div>
@@ -268,6 +269,7 @@ include('includes/header.html') ;
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+
 </div>
 
     <!--When successfully submitted, have an alert thanking them

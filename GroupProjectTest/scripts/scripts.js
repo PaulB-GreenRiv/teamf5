@@ -1,4 +1,6 @@
 document.getElementById("orgForm").onsubmit = validate;
+let logoTest = document.getElementById("imgUpload").value;
+document.getElementById("testerButton").onmouseover = isFileImage(logoTest);
 
 function validate()
 {
@@ -49,7 +51,7 @@ function validate()
 
     //Logo
     let logo = document.getElementById("imgUpload").value;
-    if (logo == "")
+    if (!isFileImage(logo))
     {
         let errLogo = document.getElementById("err-img");
         errLogo.style.display = "inline";
@@ -144,5 +146,32 @@ function validate()
         isValid = false;
     }
 
+    //Splits Keywords into an array when everything is finished
+    if (isValid)
+    {
+        let keyWords = document.getElementById("keywords").value;
+        keyWords = arrayifyKeywords(keyWords);
+        alert(keyWords);
+        document.getElementById("keywords").value = keyWords;
+    }
+
     return isValid;
+}
+
+//Used in validate() to see if a file is an image file
+function isFileImage(file) {
+    let fileSeg = file.split(".");
+    let fileExt = fileSeg[fileSeg.length - 1];
+    //This can be added to with more image file extensions
+    let acceptableExts = ["jpg", "jpeg", "png", "tif", "tiff", "bmp"];
+    return (acceptableExts.includes(fileExt));
+}
+
+function arrayifyKeywords(keywords) {
+    let newKeywords = keywords.split("#");
+    for (let i = 0; i < newKeywords.length; i++) {
+        newKeywords[i] = newKeywords[i].trim();
+    }
+    newKeywords.shift();
+    return newKeywords;
 }

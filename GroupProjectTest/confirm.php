@@ -26,6 +26,8 @@ include('includes/head.html');
 
                 $category = $_POST['category'];
                 $cemail = $_POST['cemail'];
+                $phone = $_POST['phone'];
+                $keywords = $_POST['keywords'];
 
                 $inputCity = $_POST['inputCity'];
                 $inputState = $_POST['inputState'];
@@ -36,6 +38,9 @@ include('includes/head.html');
                 $fname = $_POST['fname'];
                 $lname = $_POST['lname'];
                 $email = $_POST['email'];
+                $cTitle = $_POST['cTitle'];
+                $cPhone = $_POST['cPhone'];
+                $cAddress = $_POST['cAddress'];
 
                 //Functional, albeit crude, way to check if the uploaded file is an image
                 //grabs uploaded file
@@ -79,9 +84,12 @@ include('includes/head.html');
                 echo "<p>Tagline: $about</p>";
                 echo "<p>Category: $category</p>";
                 echo "<p>Company Email: $cemail</p>";
+                echo "<p>Phone: $phone</p>";
                 echo "<p>Located: $inputCity, $inputState. ($inputCountry) ZIP: $inputZip</p>";
                 echo "<p>Serves: $areaServed</p>";
                 echo "<p>Contact: $fname $lname ($email)</p>";
+                echo "<p>Contact Title: $cTitle, Contact Phone: $cPhone, Contact Address: $cAddress</p>";
+                echo "<p>Keywords: $keywords</p>";
 
                 //If a logo has been uploaded, the confirm page will say so.
                 $logoExist = "false";
@@ -120,5 +128,6 @@ include('includes/head.html');
 <?php
     include('includes/footer.html');
 ?>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
