@@ -1,4 +1,7 @@
 /*General*/
+html {
+    text-align: center;
+}
 body {
     font-family: SansSerif;
     width: 100%;

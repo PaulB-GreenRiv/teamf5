@@ -81,6 +81,7 @@ include('includes/header.html') ;
                             <option value="transportation">Transportation</option>
                             <option value="wastewater">Wastewater</option>
                             <option value="water">Water</option>
+                            <option value="other">Other</option>
                         </select>
                         <span class="err" id="err-category">Please select a category</span>
                     </div>
