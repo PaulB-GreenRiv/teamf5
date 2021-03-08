@@ -1,6 +1,4 @@
 document.getElementById("orgForm").onsubmit = validate;
-let logoTest = document.getElementById("imgUpload").value;
-document.getElementById("testerButton").onmouseover = isFileImage(logoTest);
 
 function validate()
 {
@@ -58,7 +56,7 @@ function validate()
         isValid = false;
     }
 
-    //check address
+    //check address (Not used)
     /*
     let address = document.getElementById("inputAddress").value;
     if (address == "")
@@ -78,37 +76,16 @@ function validate()
         isValid = false;
     }
 
-    //check email
+    //check email (Not used)
+    /*
     let email = document.getElementById("cemail").value;
-    //checks to see if the email has a @ or a .com
-    let propEmail = (email.includes("@") && email.includes(".com"));
-    if (email == "" || !propEmail)
-    {
-        let errEmail = document.getElementById("err-cemail");
-        errEmail.style.display = "inline";
-        isValid = false;
-    }
+     */
 
-    //Phone
-
-
-
+    //Phone (Not used)
+    /*
     let phone = document.getElementById("phone").value;
-
-    let phoneSegments = phone.split("-");
-    let truePhone1 = true, truePhone2 = true, truePhone3 = true;
-    if (phoneSegments.length == 3)
-    {
-        truePhone1 = (phoneSegments[0].length === 3 && !isNaN(phoneSegments[0]));
-        truePhone2 = (phoneSegments[1].length === 3 && !isNaN(phoneSegments[1]));
-        truePhone3 = (phoneSegments[2].length === 4 && !isNaN(phoneSegments[2]));
-    }
-    if ((!truePhone1 || !truePhone2 || !truePhone3) || (phoneSegments.length != 3))
-    {
-        let errPhone = document.getElementById("err-phone");
-        errPhone.style.display = "inline";
-        isValid = false;
-    }
+    isValid = validatePhone(phone);
+     */
 
     //City
     let city = document.getElementById("inputCity").value;
@@ -146,6 +123,17 @@ function validate()
         isValid = false;
     }
 
+
+    //Checking Contact info
+    let fName = document.getElementById("fname").value;
+    let lName = document.getElementById("lname").value;
+    let email = document.getElementById("email").value;
+    let title = document.getElementById("cTitle").value;
+    let cPhone = document.getElementById("cPhone").value;
+
+
+    isValid = validateContactPoint(fName, lName, email, title, cPhone) && isValid;
+
     //Splits Keywords into an array when everything is finished
     if (isValid)
     {
@@ -165,6 +153,55 @@ function isFileImage(file) {
     //This can be added to with more image file extensions
     let acceptableExts = ["jpg", "jpeg", "png", "tif", "tiff", "bmp"];
     return (acceptableExts.includes(fileExt));
+}
+
+function validateContactPoint(fName, lName, email, contact, phone) {
+    let goodEmail = validateEmail(email);
+    let goodPhone = validatePhone(phone);
+    if (!(!(fName == "") && !(lName == "") && goodEmail && !(contact == "") && goodPhone))
+    {
+        let errContact = document.getElementById("err-contact");
+        errContact.style.display = "inline";
+        if (!goodEmail) {
+            let errCEmail = document.getElementById("err-cEmail");
+            errCEmail.style.display = "inline";
+        }
+        if (!goodPhone) {
+            let errCPhone = document.getElementById("err-cPhone");
+            errCPhone.style.display = "inline";
+        }
+        return false;
+    }
+    return true;
+}
+
+//checks to see if the email has a @ or a .com
+function validateEmail(email) {
+    let valEmail = true;
+    let propEmail = (email.includes("@") && email.includes(".com"));
+    if (email == "" || !propEmail)
+    {
+        valEmail = false;
+    }
+    return valEmail;
+}
+
+//Validates Phone numbers by splitting them at the - and seeing if the individual segments are long enough
+function validatePhone(phone) {
+    let valPhone = true;
+    let phoneSegments = phone.split("-");
+    let truePhone1 = true, truePhone2 = true, truePhone3 = true;
+    if (phoneSegments.length == 3)
+    {
+        truePhone1 = (phoneSegments[0].length === 3 && !isNaN(phoneSegments[0]));
+        truePhone2 = (phoneSegments[1].length === 3 && !isNaN(phoneSegments[1]));
+        truePhone3 = (phoneSegments[2].length === 4 && !isNaN(phoneSegments[2]));
+    }
+    if ((!truePhone1 || !truePhone2 || !truePhone3) || (phoneSegments.length != 3))
+    {
+        valPhone = false;
+    }
+    return valPhone;
 }
 
 function arrayifyKeywords(keywords) {

@@ -11,32 +11,14 @@
 <?php
     include('includes/header.html');
 ?>
-<!--<div class="container" id="main">
-     Jumbotron
-    <div class="jumbotron">
-        <img src="images/coneybeare-favicon.png" height="170" width="171" alt="logo"/>
-        <h1 class="display-4">Coneybeare Sustainability Catalog</h1>
-        <p class="lead">THREE GENERATIONS OF SUCCESSFUL ENTREPRENEURS</p>
-    </div>
 
-</div>-->
-<!--Start Nav
-<div class="mainContainer">
-    <ul class="nav nav-tabs flex-column flex-sm-row">
-        <li id="menu-item-home" class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-        <li id="menu-item-about" class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li id="menu-item-signup" class="nav-item"><a class="nav-link" href="form.php">Sign Up</a></li>
-        <li id="menu-item-category" class="nav-item"><a class="nav-link" href="category.php">Categories</a></li>
-    </ul>
-</div>-->
-
-<div class="container" id="whatIs">
+<!--<div class="container" id="whatIs">
     <h1>What is this site for?</h1>
     <p>
         A searchable database and on-line marketplace for innovative solutions in sustainability;
         Creating visibility and accelerating speed to market.
     </p>
-</div>
+</div>-->
 
 <div class="container" id="categoryList">
     <h1>Categories</h1>
@@ -140,106 +122,7 @@
     </ul>
 </div>
 
-<!--bootstrap card with logos-->
-<!--
-<div class="album py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img class="card-img-top" src="images/auroratech.png" height="250"  alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Aurora Tech</h5>
-                        <p class="card-text">Technology company that is building the world’s driver and its ecosystem
-                            to save lives, get crucial goods where they need to go, and make mobility more efficient
-                            and accessible for all.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://aurora.tech/"><button type="button" class="btn btn-sm btn-outline-secondary">Visit</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img class="card-img-top" src="images/allpowerlabs.png" height="250"  alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title">All Power Labs</h5>
-                        <p class="card-text">Astrolabe Analytics’ software makes batteries work better, longer and more
-                            reliably, using a suite of cloud computing, data management and machine learning techniques.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="http://www.allpowerlabs.com/"><button type="button" class="btn btn-sm btn-outline-secondary">Visit</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img class="card-img-top" src="images/oValley1.png" height="250"  alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Organic Valley</h5>
-                        <p class="card-text">Conglomerate of local agriculture co-ops in the Midwest.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://www.organicvalley.coop/"><button type="button" class="btn btn-sm btn-outline-secondary">Visit</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img class="card-img-top" src="images/Nuleaf1.png" height="250"  alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Nuleaf</h5>
-                        <p class="card-text">NuLeaf’s NuTree makes treating and recycling water at any scale easy by
-                            mimicking wetland ecosystems.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://www.nuleaftech.com/"><button type="button" class="btn btn-sm btn-outline-secondary">Visit</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img class="card-img-top" src="images/Evmatch.jpg" height="250"  alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Evmatch</h5>
-                        <p class="card-text">EVmatch’s peer-to-peer network for EV charging harnesses the power of
-                            sharing to address the need for more reliable and convenient charging.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="https://www.evmatch.com/"><button type="button" class="btn btn-sm btn-outline-secondary">Visit</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <img class="card-img-top" src="images/aquacycl.png" height="250"  alt="Card image cap"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Aquacycl</h5>
-                        <p class="card-text">Aquacycl uses bacteria to convert organic waste into
-                            electricity, while decentralizing wastewater treatment for industries and applications.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                               <a href="https://www.aquacycl.com/"><button type="button" class="btn btn-sm btn-outline-secondary">Visit</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
 
 <?php
     include('includes/footer.html');

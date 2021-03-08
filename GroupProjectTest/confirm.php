@@ -32,7 +32,6 @@ include('includes/head.html');
                 $inputCity = $_POST['inputCity'];
                 $inputState = $_POST['inputState'];
                 $inputCountry = $_POST['inputCountry'];
-                $inputZip = $_POST['inputZip'];
                 $areaServed = $_POST['areaServed'];
 
                 $fname = $_POST['fname'];
@@ -40,7 +39,6 @@ include('includes/head.html');
                 $email = $_POST['email'];
                 $cTitle = $_POST['cTitle'];
                 $cPhone = $_POST['cPhone'];
-                $cAddress = $_POST['cAddress'];
 
                 //Functional, albeit crude, way to check if the uploaded file is an image
                 //grabs uploaded file

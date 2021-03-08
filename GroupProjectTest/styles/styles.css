@@ -1,21 +1,29 @@
 /*General*/
 html {
     text-align: center;
+    height: 100%;
+    background-color: #f8f1ff;
 }
+
 body {
     font-family: SansSerif;
     width: 100%;
+    height: 100%;
 }
 
 div {
     display: block;
 }
 
+div h1 {
+    font-weight: bold;
+}
+
 .mainContainer {
     padding: 0 10px;
     clear: both;
     margin: 0 auto;
-    background: #242424 no-repeat 0 0;
+    background: #2f0601 no-repeat 0 0;
     font-size: 20px;
 }
 
@@ -35,7 +43,7 @@ div {
     padding-bottom: 0%;
     display: block;
     align-content: center;
-    border-color: black;
+    border-color: #2f0601;
 }
 
 /*Header*/
@@ -43,9 +51,33 @@ div {
     text-align: center;
 }
 
+.jumbotron p {
+    font-size: 24px;
+}
+
+.jumbotron img {
+    float: left;
+}
+
+nav {
+    background-color: #2f0601;
+}
+
+#searchBar {
+    /*position: absolute;*/
+    /*    top: 355px;
+        left: 575px;*/
+    height: 50px;
+    width: 650px;
+    margin-right: 5px;
+}
+#formSearch {
+    margin-right: 15px;
+}
+
 /*Footer*/
 .conyFooter {
-    background: #242424 no-repeat 0 0;
+    background: #2f0601 no-repeat 0 0;
     color: #818181;
     clear: both;
     padding: 53px 0 44px 0;
@@ -62,16 +94,36 @@ div {
 }
 
 .footerBottom {
-    background-color: #141414;
+    background-color: #2f0601;
     color: #656565;
     padding-bottom: 20px;
     text-align: center;
 }
 
+.tabText {
+    color: white;
+}
+a > .tabText {
+    color: white;
+}
+
 /*Index*/
 #whatIs p {
-    font-size: 24px;
-    text-align: center;
+    font-size: 28px;
+}
+
+#categoryList {
+    /*For whatever reason, the index page doesn't cover the whole screen unless this is here,
+      The other pages work fine, but that one wants to be annoying*/
+    height: 100%;
+}
+
+#categoryList .col {
+    border: 1px solid #2f0601;
+}
+
+#categoryList .row:last-of-type .col:last-of-type {
+    border: none;
 }
 
 #categoryList li {
@@ -79,19 +131,21 @@ div {
     clear: left;
 }
 
-#categoryList li img, #categoryList li h2 {
+#categoryList li img, #categoryList li p {
     float: left;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 #categoryList a:link, #categoryList a:visited {
     text-decoration: none;
-    color: forestgreen;
+    color: #9c5288;
 }
 
 #categoryList a:hover {
     text-decoration: underline;
-    color: darkgreen;
+    color: #5bc8af;
 }
 
 #categoryList p {
@@ -103,22 +157,67 @@ div {
     color: black;
 }
 
+/*About*/
+.aboutSide {
+    text-align: center;
+}
+
+/*Login*/
+#loginForm {
+    height: 100%;
+}
+
+/*Nav*/
+.navbar {
+    overflow: auto;
+}
+
+.nav-item a {
+    color: #f8f1ff;
+    font-size: 20px;
+}
+
 /*Categories*/
 #catAgriculture h1 {
     padding-top: 10px;
     padding-bottom: 5px;
 }
 
+#catAgriculture .row {
+    align-content: center;
+}
+
+#catAgriculture .col {
+    /*
+    width: 20%;
+    height: 50%;*/
+    align-content: center;
+    word-wrap: break-word;
+}
+
+#catAgriculture ul {
+    align-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
 #catAgriculture ul li {
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: #2f0601;
     border-radius: 3px;
-    background-color: white;
+    /*background-color: #f8f1ff;*/
     list-style-type: none;
-    padding-left: 10px;
+    /*
+    padding-left: 5px;
+    padding-right: 5px;*/
     margin-bottom: 10px;
-    background-color: rgba(156, 252, 0, 0.5);
+    background-color: #47624f;
+}
+
+#catAgriculture img {
+    height: 80%;
+    width: 80%;
 }
 
 #catAgriculture p {
@@ -127,26 +226,26 @@ div {
 
 #catAgriculture a:link, #catAgriculture a:visited {
     text-decoration: none;
-    color: mediumblue;
+    color: #9c5288;
 }
 
 #catAgriculture a:hover {
     text-decoration: underline;
-    color: darkblue;
+    color: #5bc8af;
 }
 
 /*Form*/
-#orgForm {
-    background-color: #cccccf;
+#aboutText p {
+    font-size: 28px;
 }
 
-#aboutText p {
-    text-align: center;
-    font-size: 24px;
+form p, form span {
+    font-size: 20px;
 }
 
 .err {
     color:#ff0000;
+    font-weight: bold;
     display:none;
 }
 
@@ -163,18 +262,11 @@ fieldset:last-of-type .col, fieldset:first-of-type .col {
 }
 
 form#orgForm {
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #050505;
-    /*
-    padding: 5px;
-    */
     color: black;
-    overflow: auto;
+    overflow: hidden;
 }
 
 form#orgForm .row {
-    background-color: rgb(186, 186, 252);
     padding-bottom: 10px;
 }
 
@@ -183,9 +275,8 @@ form#orgForm .row {
 }
 
 fieldset {
-    background-color: rgba(156, 252, 0, 0.5);
+    background-color: #47624f;
     border-style: solid;
-    border-color: #141414;
 }
 
 .btn-primary {
@@ -198,22 +289,14 @@ fieldset {
 }
 
 label {
-    font-size: 20px;
-}
-
-fieldset, fieldset.div {
-
+    font-size: 28px;
 }
 
 legend {
     text-transform: uppercase;
-    text-align: center;
+    font-weight: bold;
 }
 
-h4 {
-    text-align: center;
-}
-
-.navbar-light .navbar-nav .nav-link{
-    color:white !important;
+nav ul a{
+    color: white !important;
 }
