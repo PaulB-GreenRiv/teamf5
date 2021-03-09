@@ -9,6 +9,7 @@ body {
     font-family: SansSerif;
     width: 100%;
     height: 100%;
+    background-color: #f8f1ff;
 }
 
 div {
@@ -222,16 +223,17 @@ a > .tabText {
 
 #catAgriculture p {
     font-size: 20px;
+    color: black;
 }
 
 #catAgriculture a:link, #catAgriculture a:visited {
     text-decoration: none;
-    color: #9c5288;
+    color: #5bc8af;
 }
 
 #catAgriculture a:hover {
     text-decoration: underline;
-    color: #5bc8af;
+    color: #9c5288;
 }
 
 /*Form*/

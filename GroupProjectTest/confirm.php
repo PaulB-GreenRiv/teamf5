@@ -16,9 +16,6 @@ include('includes/head.html');
 
         <pre>
             <?php
-
-                //var_dump($_POST);
-
                 $oname = $_POST['oname'];
                 $website = $_POST['website'];
 
@@ -32,17 +29,20 @@ include('includes/head.html');
                 $inputCity = $_POST['inputCity'];
                 $inputState = $_POST['inputState'];
                 $inputCountry = $_POST['inputCountry'];
+                $inputZip = $_POST['inputZip'];
                 $areaServed = $_POST['areaServed'];
 
                 $fname = $_POST['fname'];
                 $lname = $_POST['lname'];
                 $email = $_POST['email'];
                 $cTitle = $_POST['cTitle'];
+                //$cAddress = $_POST[];
                 $cPhone = $_POST['cPhone'];
 
-                //Functional, albeit crude, way to check if the uploaded file is an image
+                //This whole next section is for uploading images
                 //grabs uploaded file
                 $target_dir = "uploads/";
+                $target_dir .= date('ymdHis');
                 $target_file = $target_dir . basename($_FILES['imgUpload']['name']);
                 $uploadOk = 0;
                 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -65,16 +65,45 @@ include('includes/head.html');
                     }
                 }
 
-
-                /*
-                if(isset($_POST['submit']))
-                {
-
+                // Check if file already exists
+                if (file_exists($target_file)) {
+                    echo "Sorry, logo file already exists.";
+                    $uploadOk = 0;
                 }
-                /*
-                $imgUoad = $_POST['imgUpload'];
-                $logoUploaded = empty($imgUpload);
-                */
+
+                // Check file size
+                if ($_FILES["imgUpload"]["size"] > 500000) {
+                    echo "Sorry, your logo file is too large.";
+                    $uploadOk = 0;
+                }
+
+                // Check if $uploadOk is set to 0 by an error
+                if ($uploadOk == 0) {
+                    echo "Sorry, your logo file was not uploaded.";
+                // if everything is ok, try to upload file
+                } else {
+
+                    if (move_uploaded_file($_FILES["imgUpload"]["tmp_name"], $target_file)) {
+                        /*
+                         * This will be for uploading logo file location to the database
+                         *
+                        echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+
+                        require ($_SERVER['HOME'].'/connect.php');
+                        $cnxn = connect();
+
+                        $sql = "INSERT INTO uploads (image_name) 
+                    VALUES ('$target_file')";
+                        $success = mysqli_query($cnxn, $sql);
+                        if (!$success) {
+                            echo "Sorry, there was a database error.";
+                        }
+                        */
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                    }
+                }
+                /*Image Stuff end*/
 
                 echo "<h2>Submission Summary:</h2>";
                 echo "<p>Organization Name: $oname</p>";
@@ -86,7 +115,7 @@ include('includes/head.html');
                 echo "<p>Located: $inputCity, $inputState. ($inputCountry) ZIP: $inputZip</p>";
                 echo "<p>Serves: $areaServed</p>";
                 echo "<p>Contact: $fname $lname ($email)</p>";
-                echo "<p>Contact Title: $cTitle, Contact Phone: $cPhone, Contact Address: $cAddress</p>";
+                echo "<p>Contact Title: $cTitle, Contact Phone: $cPhone</p>";
                 echo "<p>Keywords: $keywords</p>";
 
                 //If a logo has been uploaded, the confirm page will say so.
@@ -100,8 +129,8 @@ include('includes/head.html');
                 echo "<br>";
 
                 //email function, place proper email addresses in fields
-                $emailTo = 'pbutler10@mail.greenriver.edu';
-                $emailFrom = 'pbutler10@mail.greenriver.edu';
+                $emailTo = '#';
+                $emailFrom = '#';
                 $emailBody = "Welcome to Coneybeare $oname!\r\n";
                 $emailBody .= "Their website is: $website and their email address is $cemail.\r\n";
                 $emailBody .= "Their tagline is: $about\r\n";

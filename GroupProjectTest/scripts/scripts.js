@@ -139,7 +139,6 @@ function validate()
     {
         let keyWords = document.getElementById("keywords").value;
         keyWords = arrayifyKeywords(keyWords);
-        alert(keyWords);
         document.getElementById("keywords").value = keyWords;
     }
 
