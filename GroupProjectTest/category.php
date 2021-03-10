@@ -28,6 +28,8 @@ include('includes/header.html');
             //Gets searched item from search bar
             if (isset($_GET['search'])) {
                 $searching = $_GET['search'];
+            } elseif (isset($_GET['getIndex'])) {
+                $searching = $_GET['getIndex'];
             }
 
             //If what is searched is in the categories array, displays category name
