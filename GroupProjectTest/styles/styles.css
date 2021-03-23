@@ -58,6 +58,7 @@ div h1 {
 
 .jumbotron img {
     float: left;
+
 }
 
 nav {
@@ -184,42 +185,79 @@ a > .tabText {
     padding-bottom: 5px;
 }
 
+/**Category Dropdown List**/
+
+#catAgriculture {
+    width: 100%;
+}
+
+/**Category Cards Height Fix Start**/
 #catAgriculture .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
     align-content: center;
+    width: 100%;
 }
 
-#catAgriculture .col {
-    /*
-    width: 20%;
-    height: 50%;*/
-    align-content: center;
-    word-wrap: break-word;
+#catAgriculture .row > [class*="col-"]{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 10px;
+    background-color: #92AC86;
 }
 
-#catAgriculture ul {
+@media screen and (max-width: 480px){
+
+    #catAgriculture .row {
+        align-content: center;
+    }
+
+    #catAgriculture .row > [class*="col-"]{
+        width: 100%;
+    }
+
+}
+/**Category Cards Height Fix End**/
+
+
+/*
+#catAgriculture .row {
+
+    align-content: center;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5%;
     align-content: center;
     list-style-type: none;
     padding: 0;
-}
+}*/
+/*
+#catAgriculture .col {
 
-#catAgriculture ul li {
+    width: 20%;
+    height: 50%;
+    align-content: center;
+    word-wrap: break-word;
     border-style: solid;
     border-width: 1px;
     border-color: #2f0601;
-    border-radius: 3px;
+    border-radius: 3px;*/
     /*background-color: #f8f1ff;*/
-    list-style-type: none;
+    /*list-style-type: none;
     /*
-    padding-left: 5px;
-    padding-right: 5px;*/
+    pding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 10px;
     background-color: #47624f;
-}
-
-#catAgriculture img {
-    height: 80%;
-    width: 80%;
-}
+}*/
 
 #catAgriculture p {
     font-size: 20px;
@@ -246,7 +284,7 @@ form p, form span {
 }
 
 .err {
-    color:#ff0000;
+    color:#990000;
     font-weight: bold;
     display:none;
 }
@@ -297,6 +335,93 @@ label {
 legend {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+/*Confirm Page*/
+#confirmDiv {
+    width: 100%;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: #92AC86;
+    align-content: start;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#confirmDiv p {
+    font-size: 20px;
+}
+
+#confirmDiv h1 {
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: #f8f1ff;
+    margin-top: 16px;
+}
+
+#confirmDiv div {
+    align-content: center;
+}
+
+#confirmDiv a {
+    margin-top: 16px;
+}
+
+#confirmDiv a, #shrinkFields a {
+    width: 80px;
+    margin: 2%;
+}
+
+#shrinkFields {
+    clear: both;
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+    background-color: #A2BC96;
+    border-radius: 5px;
+    padding: 8px;
+    /*border: solid 1px black;*/
+}
+
+#submSummary {
+    background-color: #f8f1ff;
+    border-radius: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    text-wrap: normal;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#submSummary img {
+    float: none;
+    clear: both;
+}
+
+#exitForm {
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: cyan;
+    padding: 8px;
+    color: black;
+}
+
+#exitForm:hover {
+    color: white;
+}
+
+#submSummary p {
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+#confirmDiv h1 {
+    clear: both;
 }
 
 nav ul a{

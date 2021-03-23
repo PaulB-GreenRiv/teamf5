@@ -27,7 +27,7 @@
             <div class="col">
                 <li>
                     <img src="images/imgAgri.png" height="20" alt="Agriculture Image" id="Agriculture">
-                    <p><a href="category.php">Agriculture</a></p>
+                    <p><a href="category.php?getIndex=Agriculture">Agriculture</a></p>
                 </li>
             </div>
             <div class="col">

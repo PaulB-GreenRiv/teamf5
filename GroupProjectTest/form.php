@@ -3,6 +3,12 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+//Destroys Session if it is active
+session_start();
+session_regenerate_id();
+session_destroy();
+$_SESSION = array();
+
 include('includes/head.html');
 ?>
 <body>
@@ -175,7 +181,7 @@ include('includes/header.html');
             <p class="aboutSide">This person will be contacted regarding questions about their submission.<br>
             This section is required, but will not be included in the catalog. </p>
             <span class="err" id="err-contact">Please fill out this section</span><br>
-            <span class="err" id="err-cEmail">Invalid email, please use an email that uses an @ and a .com</span><br>
+            <span class="err" id="err-cEmail">Invalid email, please use an email that uses an @ and a .</span><br>
             <span class="err" id="err-cPhone">Invalid phone, must be in format ###-###-####</span>
 
             <div class="row">
@@ -244,4 +250,5 @@ include('includes/footer.html');
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 -->
 
-</body></html>
+</body>
+</html>

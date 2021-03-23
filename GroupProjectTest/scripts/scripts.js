@@ -1,4 +1,5 @@
 document.getElementById("orgForm").onsubmit = validate;
+document.getElementById("editForm").onsubmit = validate;
 
 function validate()
 {
@@ -48,13 +49,17 @@ function validate()
     }
 
     //Logo
-    let logo = document.getElementById("imgUpload").value;
-    if (!isFileImage(logo))
-    {
-        let errLogo = document.getElementById("err-img");
-        errLogo.style.display = "inline";
-        isValid = false;
+    if (window.location.href !== "https://pbutler.greenriverdev.com/305/GroupProjectTest/confirm.php?confirming=edit") {
+        let logo = document.getElementById("imgUpload").value;
+        if (!isFileImage(logo))
+        {
+            let errLogo = document.getElementById("err-img");
+            errLogo.style.display = "inline";
+            isValid = false;
+        }
     }
+    /*
+    */
 
     //check address (Not used)
     /*
@@ -146,6 +151,7 @@ function validate()
 }
 
 //Used in validate() to see if a file is an image file
+
 function isFileImage(file) {
     let fileSeg = file.split(".");
     let fileExt = fileSeg[fileSeg.length - 1];
@@ -177,7 +183,7 @@ function validateContactPoint(fName, lName, email, contact, phone) {
 //checks to see if the email has a @ or a .com
 function validateEmail(email) {
     let valEmail = true;
-    let propEmail = (email.includes("@") && email.includes(".com"));
+    let propEmail = (email.includes("@") && email.includes("."));
     if (email == "" || !propEmail)
     {
         valEmail = false;
